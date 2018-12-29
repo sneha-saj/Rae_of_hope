@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+ body {
+    font-family: "Lato", sans-serif;
+    background-color: rgb(0,102,100);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: crimson;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav a.active
+    {
+        background-color:cornsilk;
+        color:crimson;
+    }
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.heading{
+    background-color: lightsalmon;
+       text-align: center;
+       height: 90px;
+  }
+  .h1{
+    font-size: 45px;
+    color: crimson;
+    
+  }
+  .h2{
+    font-size: 20px;
+    position: relative;
+     top: -8px;
+ }
+  #im{
+    border-radius: 8px;
+    margin-left: 80px;
+    position: relative;
+    top: 20px;
+  }
+  #box{
+      width: 30%;
+      background-color: crimson;
+      height: 450px;
+      margin-top: 0px;
+      margin-left: 100px;
+    box-shadow: 0 0 27px #000;
+    }
+    #box2{
+      box-shadow: 0 0 27px #000;
+      width: 60%;
+      margin-top: -380px;
+      margin-left: 530px;
+      height: 450px;
+      background-color: purple;
+      
+    }
+    .user{
+      font-size: 30px;
+      margin-left: 20px;
+      position:relative;
+      top: 20px;;
+
+    }
+    #imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 80px;
+    position: relative;
+    top: 20px;
+}
+#latestim{
+  height: 300px;
+  margin: 20px;
+}
+.status{
+  position: relative;
+  top: -400px;
+  left: 450px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="active">User profile</a>
+  <a href="upload.html">Uploads</a>
+  <a href="news.html">News</a>
+  <a href="logout.html">Logout</a>
+</div>
+
+<div class="heading">
+<h class="h1">RAE OF HOPE</h>
+<p class="h2">A step towards changing the world!</p></div>
+
+<span style="font-size:30px;position:relative;top:-45px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<div class="card" id="box">
+<div>
+
+  <img src="dp.jpg" class="rounded-circle" id="profileImage"> 
+  </div>
+  <table class="user">
+    <tr><td>username :</td><td id="myp">czczxc</td></tr>
+<tr><td>mob no :</td><td id="myp2">928652858</td></tr></table>
+<button  class="btn" onclick="myfunct()" style="height: 30px;width: 70px; position: relative;top:-310px;"><i class="fa fa-edit">Edit</i></button>
+<script>
+  function myfunct(){
+    document.getElementById("myp").contentEditable = true;
+     document.getElementById("myp2").contentEditable = true;
+     document.getElementById("im").contentEditable = true;
+  }
+  $("#profileImage").click(function(e) {
+    $("#imageUpload").click();
+});
+
+function fasterPreview( uploader ) {
+    if ( uploader.files && uploader.files[0] ){
+          $('#profileImage').attr('src', 
+             window.URL.createObjectURL(uploader.files[0]) );
+    }
+}
+
+$("#imageUpload").change(function(){
+    fasterPreview( this );
+});
+</script>
+</div> 
+<div class="card" id="box2">
+  <figure class="figure"><img class="img-responsive" src="image.png" alt="image.png" id="latestim"><figcaption class="figure-caption">username<br><p id="date"></p><script>
+    document.getElementById("date").innerHTML = Date();
+  </script></figcaption> </figure>
+  <div class="status"><h3 style="color:crimson;">LATEST REPORT STATUS</h3><h5 style="color:white;">Investigation in progress!</h5><br><h5 style="color:crimson;"">Want to contact authorities?</h5><br>
+    <h5 style="color:blue;"><address><a href="mailto:abc@gmail.com">abc@gmail.com</a></address></h5></div>
+</div>
+</body>
+</html> 

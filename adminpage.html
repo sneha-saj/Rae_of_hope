@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<style>
+.heading{
+    background-color: coral;
+       text-align: center;
+       font: bold;
+       height: 90px;
+  }
+  .h1{
+    font-size: 45px;
+    color: crimson;
+    
+  }
+  .h2{
+    font-size: 20px;
+    position: relative;
+     top: -8px;
+ }
+ #box{
+  min-height: 400px;
+  width: 70%;
+  margin-left: 200px;
+  position: relative;
+  top: 20px;
+  background-color: darkslateblue;
+  box-shadow: 0 0 20px #000;
+ }
+ #tit{
+  background-color: white;
+ }
+ 
+    
+
+    .for{
+        width: 60%;
+        background-color: transparent;
+        margin-left: 150px;
+        color: yellow;
+  }
+  .l{
+    font-size: 30px;
+    padding-left: 150px;
+    color: yellow;
+  }
+  #im{
+    padding-left:60px; 
+  }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="heading">
+<h class="h1">RAE OF HOPE</h>
+<p class="h2">A step towards changing the world!</p></div>
+<div class="card" id="box"><div class="container-fluid"><div class="row" id="tit"><h2>Welcome admin!</h2></div>
+  <nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="adminpage.html">TODAY</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="date.html">DATE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="user.html">SEARCH USER</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="users.html">USERS</a>
+    </li>
+   <li class="nav-item">
+      <a class="nav-link" href="#">LOGOUT</a>
+    </li>
+   
+  </ul></nav>
+
+</div>
+<br>
+<div class="row">
+  <div class="col-lg-4"><figure class="figure"><img class="img-responsive" id="im" src="image.png" alt="image"><figcaption class="figure-caption" style="margin-left: 20px;">username<br><p id="date"></p><script>
+    document.getElementById("date").innerHTML = Date();
+  </script></figcaption></div>
+    <div class="col-lg-4"><figure class="figure"><img class="img-responsive" id="im" src="image.png" alt="image"><figcaption class="figure-caption" style="margin-left: 20px;">username<br><p id="date1"></p><script>
+    document.getElementById("date1").innerHTML = Date();
+  </script></figcaption></div>
+    <div class="col-lg-4"><figure class="figure"><img class="img-responsive" id="im" src="image.png" alt="image"><figcaption class="figure-caption" style="margin-left: 20px;">username<br><p id="date2"></p><script>
+    document.getElementById("date2").innerHTML = Date();
+  </script></figcaption></div>
+    
+</div>
+<br>
+<div class="row">
+  <div class="col-lg-4"><figure class="figure"><img class="img-responsive" id="im" src="image.png" alt="image"><figcaption class="figure-caption" style="margin-left: 20px;">username<br><p id="date3"></p><script>
+    document.getElementById("date3").innerHTML = Date();
+  </script></figcaption></div>
+    <div class="col-lg-4"><figure class="figure"><img class="img-responsive" id="im" src="image.png" alt="image"><figcaption class="figure-caption" style="margin-left: 20px;">username<br><p id="date4"></p><script>
+    document.getElementById("date4").innerHTML = Date();
+  </script></figcaption></div>
+    <div class="col-lg-4"><figure class="figure"><img class="img-responsive" id="im" src="image.png" alt="image"><figcaption class="figure-caption" style="margin-left: 20px;">username<br><p id="date5"></p><script>
+    document.getElementById("date5").innerHTML = Date();
+  </script></figcaption></div>
+    
+</div>
+<br>
+<div class="row">
+  <div class="col-lg-4"><img class="img-responsive" id="im" src="image.png" alt="image"></div>
+    <div class="col-lg-4"><img class="img-responsive" id="im" src="image.png" alt="image"></div>
+    <div class="col-lg-4"><img class="img-responsive" id="im" src="image.png" alt="image"></div>
+    
+</div>
+<br>
+</body>
+</html>

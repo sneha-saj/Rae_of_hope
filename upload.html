@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+ <style> 
+body {
+    
+    background: rgb(0,102,100); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    background-color: crimson;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a.active
+    {
+        background-color:cornsilk;
+        color:crimson;
+    }
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.heading{
+    background-color: lightsalmon;
+       text-align: center;
+       height: 90px;
+  }
+  .h1{
+    font-size: 45px;
+    color: crimson;
+    
+  }
+  .h2{
+    font-size: 20px;
+    position: relative;
+     top: -8px;
+ }
+
+ .box{
+     color: red;
+     
+     background-color: rgb(255,255,255,0.35); 
+     height: 600px;
+     width: 50%;
+     text-align: center;
+     margin-left: 300px;
+     margin-top: -20px;
+     shape-margin: round;
+	}
+	.h{
+     font-size: 30px;
+	}
+  .for{
+    text-align: left;
+    width: 60%;
+    margin-left: 100px;
+  }
+</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="userpage.html">User profile</a>
+  <a class="active">Uploads</a>
+  <a href="news.html">News</a>
+  <a href="logouts.html">Logout</a>
+
+</div>
+
+<div class="heading">
+<h class="h1">RAE OF HOPE</h>
+<p class="h2">A step towards changing the world!</p></div>
+
+<span style="font-size:30px;position:relative;top:-45px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<div class="box">
+  <br> 	 <h class="h">REPORT A PROBLEM</h>
+  <form action="/action_page.php" class="for">
+  
+  <div class="form-group">
+    <label for="email">Enter your problem:</label>
+    <input type="text" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Enter place:</label>
+    <input type="text" class="form-control" id="pwd">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Confirm vehicle no(if present):</label>
+    <input type="number" class="form-control" id="pwd">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Rate your difficulty:</label>
+    <input type="number" class="form-control" id="adhaar">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Upload image:</label>
+    <input type="file" class="form-control" accept="image/*" id="im">
+  </div>
+  <button type="submit" class="btn btn-primary">submit</button>
+</form>
+   </div>
+</body>
+</html>

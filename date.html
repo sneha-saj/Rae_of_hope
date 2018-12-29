@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<style>
+.heading{
+    background-color: coral;
+       text-align: center;
+       font: bold;
+       height: 90px;
+  }
+  .h1{
+    font-size: 45px;
+    color: crimson;
+    
+  }
+  .h2{
+    font-size: 20px;
+    position: relative;
+     top: -8px;
+ }
+ #box{
+  height: 400px;
+  width: 70%;
+  margin-left: 200px;
+  position: relative;
+  top: 20px;
+  background-color: darkslateblue;
+  box-shadow: 0 0 20px #000;
+ }
+ #tit{
+  background-color: white;
+ }
+ 
+    
+
+    .for{
+        width: 60%;
+        background-color: transparent;
+        margin-left: 150px;
+        color: yellow;
+  }
+  .l{
+    font-size: 30px;
+    padding-left: 150px;
+    color: yellow;
+  }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="heading">
+<h class="h1">RAE OF HOPE</h>
+<p class="h2">A step towards changing the world!</p></div>
+<div class="card" id="box"><div class="container-fluid"><div class="row" id="tit"><h2>Welcome admin!</h2></div>
+  <nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="adminpage.html">TODAY</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="date.html">DATE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="user.html">SEARCH USER</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="users.html">USERS</a>
+    </li>
+   <li class="nav-item">
+      <a class="nav-link" href="#">LOGOUT</a>
+    </li>
+   
+  </ul></nav>
+
+<div class="row"><form action="/action_page.php" class="for">
+  <p class="l">SEARCH A DATE</p>
+  <div class="form-group">
+    <label for="date">Enter a date:</label>
+    <input type="date" class="form-control" id="date">
+  </div>
+
+  <button type="submit" class="btn btn-primary">view</button>
+</form></div></div></div>
+</body>
+</html>
